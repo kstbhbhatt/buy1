@@ -82,7 +82,7 @@ else{
     <p class="price">₹${stck.price}</p>
     <p id="prod-descp">${stck.descp}</p>
     <br>
-    <p class="specs" id="specs${stck.sr}">Show Specifications<p>`;
+    <p class="specs" id="specss${stck.sr}">Show Specifications<p>`;
 
 
     const readMore = document.createElement("div");
@@ -172,10 +172,21 @@ else{
     }
     
     };
+    
 
 }
-
-
+specs()
+function specs(){
+    stock4.forEach(function(stck){
+        document.getElementById(`specss${stck.sr}`).addEventListener('click', function(e){
+            document.getElementById(`specs${stck.sr}`).innerHTML = '';
+            var show = document.getElementById(`table${stck.sr}`);
+            console.log('Yo');
+            show.style.display = "block";
+    
+            e.preventDefault()
+        })
+    });}
 
 
 

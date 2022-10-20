@@ -404,13 +404,16 @@ tr:last-child > th{
 
 
 /* form */
+.pd{
+    padding: 20px;
+}
 .form{
     text-align: center;
     height: 650px;
     background-color: #fff;
     width: 40%;
     min-width: 570px;
-    margin: 20px auto 20px;
+    margin:auto;
     border: none;
     padding: 20px;
     box-sizing: border-box;

@@ -45,7 +45,10 @@ function register(){
         }else if(checkuser(userName) == true){
             message.innerText = `${userName} is already taken` ;
         }else{
+            
            message.innerHTML = `${userName} is now a user`;
+           document.getElementById('register').id="register1";
+        document.getElementById('register1').innerHTML=`<a href="test.html"><button class="btn4 dark" value="Submit">Login</button></a>`;
             object = {
                 username: `${userName}`,
                 password: `${password}`,

@@ -1,8 +1,9 @@
+// alert('Click Buy Now to Proceed')
 let active = JSON.parse(localStorage.getItem("active")) || [];
 if(active.length == 0){
     document.getElementById("search-bar").innerHTML= `<a href="test.html" ><button class="btn3" >Log In</button></a>
     <a href="register.html" "><button class="btn3" >Sign Up</button></a>`;
-    alert("Not Signed In");
+    
     window.location = "home.html";
 }else{
     document.getElementById("search-bar").innerHTML= `<a href="" ><button class="btn3" disabled>${active[0].username}</button></a>

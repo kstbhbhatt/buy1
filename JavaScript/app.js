@@ -219,6 +219,11 @@ if(active.length == 0){
 }else{
     document.getElementById("search-bar").innerHTML= `<a href="" ><button class="btn3" disabled>${active[0].username}</button></a>
     <a href="" id="logout"><button class="btn3" >Log Out</button></a>`;
+    document.getElementById("logout").addEventListener('click', function(){
+        active = [];
+        localStorage.setItem("active", JSON.stringify(active));
+        alert("you successfully Signed Out")
+    });
 
 }
 // --------------------------
@@ -312,11 +317,11 @@ stock3.forEach(type)
 
 };
 }
-document.getElementById("logout").addEventListener('click', function(){
-    active = [];
-    localStorage.setItem("active", JSON.stringify(active));
-    alert("you successfully Signed Out")
-});
+// document.getElementById("logout").addEventListener('click', function(){
+//     active = [];
+//     localStorage.setItem("active", JSON.stringify(active));
+//     alert("you successfully Signed Out")
+// });
 
 
 // document.getElementById('card1').addEventListener('click', function(e){

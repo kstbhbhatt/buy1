@@ -6,7 +6,12 @@ if(active.length == 0){
 }else{
     document.getElementById("search-bar").innerHTML= `<a href=""><button class="btn3" disabled>${active[0].username}</button></a>
     <a href="test.html" id="logout"><button class="btn3" >Log Out</button></a>`;
-
+    document.getElementById("logout").addEventListener('click', function(){
+        active = [];
+        localStorage.setItem("active", JSON.stringify(active));
+        alert("You Successfully Signed Out")
+        
+    });
 }
 console.log(active);
 if(stock3.length == 0){
@@ -32,7 +37,7 @@ stock3.forEach(products)
     const descp = document.createElement("div");
     descp.classList.add("col3", "prod-descp");descp.classList.add("col3", "prod-descp");
     descp.innerHTML=`<h2 id="prod-name">${stck.name}</h2>
-    <p class="price">$${stck.price}</p>
+    <p class="price">₹${stck.price}</p>
     <p id="prod-descp">${stck.descp}</p>
     <br>
     <p class="specs" id="specs${stck.sr}">Show Specifications<p>`;
@@ -207,12 +212,12 @@ stock3.forEach(function(stck){
         
     })
 });
-document.getElementById("logout").addEventListener('click', function(){
-    active = [];
-    localStorage.setItem("active", JSON.stringify(active));
-    alert("You Successfully Signed Out")
+// document.getElementById("logout").addEventListener('click', function(){
+//     active = [];
+//     localStorage.setItem("active", JSON.stringify(active));
+//     alert("You Successfully Signed Out")
     
-});
+// });
 
 
 

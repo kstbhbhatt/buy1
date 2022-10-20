@@ -8,6 +8,11 @@ if(active.length == 0){
 }else{
     document.getElementById("search-bar").innerHTML= `<a href="" ><button class="btn3" disabled>${active[0].username}</button></a>
     <a href="" id="logout"><button class="btn3" >Log Out</button></a>`;
+    document.getElementById("logout").addEventListener('click', function(){
+        active = [];
+        localStorage.setItem("active", JSON.stringify(active));
+        alert("you successfully Signed Out")
+    });
 
 }
 let buy1 = JSON.parse(localStorage.getItem("buy1")) || [];
@@ -50,7 +55,7 @@ buy2.forEach(product)
     const descp = document.createElement("div");
     descp.classList.add("col3", "prod-descp");
     descp.innerHTML=`<h2 id="prod-name">${crt.name}</h2>
-    <p class="price">$${crt.price}</p>
+    <p class="price">₹${crt.price}</p>
     <p id="prod-descp">${crt.descp}</p>`;
 
 
@@ -70,8 +75,8 @@ buy2.forEach(product)
 };
 }
 
-document.getElementById("logout").addEventListener('click', function(){
-    active = [];
-    localStorage.setItem("active", JSON.stringify(active));
-    alert("you successfully Signed Out")
-});
+// document.getElementById("logout").addEventListener('click', function(){
+//     active = [];
+//     localStorage.setItem("active", JSON.stringify(active));
+//     alert("you successfully Signed Out")
+// });

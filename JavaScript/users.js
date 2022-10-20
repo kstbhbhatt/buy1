@@ -77,13 +77,18 @@ if(active.length == 0){
 }else{
     document.getElementById("search-bar").innerHTML= `<a href="" ><button class="btn3" disabled>${active[0].username}</button></a>
     <a href="" id="logout"><button class="btn3" >Log Out</button></a>`;
+    document.getElementById("logout").addEventListener('click', function(){
+        active = [];
+        localStorage.setItem("active", JSON.stringify(active));
+        alert("you successfully Signed Out")
+    });
 
 }
-document.getElementById("logout").addEventListener('click', function(){
-    active = [];
-    localStorage.setItem("active", JSON.stringify(active));
-    alert("you successfully Signed Out")
-});
+// document.getElementById("logout").addEventListener('click', function(){
+//     active = [];
+//     localStorage.setItem("active", JSON.stringify(active));
+//     alert("you successfully Signed Out")
+// });
 function check(username, password){
         for(var i = 0; i < users.length; i++){
             if((users[i].username == username)&&(users[i].password == password)){

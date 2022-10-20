@@ -1,7 +1,7 @@
 let searchss= new Array();
 let stock4 = JSON.parse(localStorage.getItem("stock2")) || [];
     document.getElementById("search-button").addEventListener("mousedown", function(){
-        alert('hi')
+        // alert('hi')
         search(searched)
        
     });
@@ -52,7 +52,7 @@ if(search3.length == 0){
     // alert();
 }
 else{
-    alert('yo')
+    // alert('yo')
     var searchButton1 = document.getElementById("search-button");
     searchButton1.onmouseup = function() {
     var f = document.getElementById("smartphone");

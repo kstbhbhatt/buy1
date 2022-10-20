@@ -115,7 +115,7 @@ nav ul li a:hover{
     width: 100%;
     box-sizing: border-box;
     margin: 0px auto 0;
-    padding: 10px 0 10px 0;
+    /* padding: 0; */
     background-color: #eee;
     height: auto;
 }
@@ -265,6 +265,17 @@ nav ul li a:hover{
 
 
 #smartphone{
+    
+    margin: auto;
+    padding: 10px;
+    background-color: #ccc;
+    
+    padding: 20px;
+    
+    border: 0;
+    
+}
+#smartphone1{
     
     margin: auto;
     padding: 10px;

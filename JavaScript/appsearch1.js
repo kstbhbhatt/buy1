@@ -157,7 +157,7 @@ else{
     node1.appendChild(node);
     node1.appendChild(table);
 
-    document.getElementById("smartphone").appendChild(node1);  
+    document.getElementById("smartphone1").appendChild(node1);  
     
 
         console.log(searchss)

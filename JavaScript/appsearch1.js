@@ -2,6 +2,7 @@ let searchss= new Array();
 let stock4 = JSON.parse(localStorage.getItem("stock2")) || [];
     document.getElementById("search-button").addEventListener("mousedown", function(){
         // alert('hi')
+        
         search(hello)
        
     });
@@ -14,11 +15,9 @@ function search(callback){
     stock4.forEach(search)
     function search(stck){
         var input = document.getElementById("search");
-
-        // console.log(input.value);
         
         if(stck.name.toLowerCase().match(input.value.toLowerCase()) ){
-            // console.log(stck.name);
+            
             let searcher = 
             {
                 sr : `${stck.sr}`,
@@ -51,7 +50,6 @@ function search(callback){
         }
     };
     callback();
-    // callback1()
     return searchss
 
 }
@@ -74,6 +72,8 @@ else{
     searchButton1.onmouseup = function() {
     var f = document.getElementById("smartphone");
     f.innerHTML='';
+    var fg = document.getElementById("smartphone1");
+    fg.innerHTML='';
     var cross = document.getElementById("search-button");
     
     search3.forEach(productt)
@@ -178,6 +178,7 @@ else{
     
 
         console.log(searchss)
+        // searchss.splice(0, searchss.length);
         
        
     };

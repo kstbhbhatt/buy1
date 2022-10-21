@@ -57,10 +57,12 @@ function login(){
 
 
     if(check(userName, password) == true){
-        message.innerText = `Welcome ${userName}`;
-        message1.style.display = "none";
-        document.getElementById('button').id="button1";
-        document.getElementById('button1').innerHTML=`<a href="home.html"><button class="btn4 dark" value="Submit">Go To Home</button></a>`;
+        // message.innerText = `Welcome ${userName}`;
+        // message1.style.display = "none";
+        // document.getElementById('button').id="button1";
+        // document.getElementById('button1').innerHTML=`<a href="home.html"><button class="btn4 dark" value="Submit">Go To Home</button></a>`;
+        alert(`Welcome ${userName}`);
+        window.location = "home.html";
     }else{
         message.innerHTML = `Username or password don't match. Try <a href="register.html">registering</a>`;
         message1.style.display = "none";

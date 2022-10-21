@@ -114,7 +114,7 @@ items.innerHTML = `<button class="btn2 ">Proceed to Buy (${cart1.length} items)<
 document.getElementById("buyy").addEventListener('mousedown', function(e){
     localStorage.setItem("buy1", JSON.stringify(cart1));
     // alert(cart1)
-        
+        e.preventDefault()
 })
 
 // document.getElementById("logout").addEventListener('click', function(){

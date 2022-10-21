@@ -2,7 +2,7 @@ let searchss= new Array();
 let stock4 = JSON.parse(localStorage.getItem("stock2")) || [];
     document.getElementById("search-button").addEventListener("mousedown", function(){
         // alert('hi')
-        search(searched)
+        search(hello)
        
     });
 
@@ -27,7 +27,20 @@ function search(callback){
                 codeName: `${stck.codeName}`,
                 descp: `${stck.descp}`,
                 serialNumber: `${stck.serialNumber}`,
-                buy:  `${stck.buy}`
+                buy:  `${stck.buy}`,
+                dimensions: `${stck.dimensions}`,
+                weight: `${stck.weight}`,
+                build: `${stck.build}`,
+                displayType: `${stck.displayType}`,
+                screenSize: `${stck.screenSize}`,
+                resolution: `${stck.resolution}`,
+                protection: `${stck.protection}`,
+                os: `${stck.os}`,
+                Chipset: `${stck.Chipset}`,
+                selfieCamera: `${stck.selfieCamera}`,
+                battery: `${stck.battery}`,
+
+
                 
             }
             searchss.push(searcher);
@@ -38,14 +51,18 @@ function search(callback){
         }
     };
     callback();
+    // callback1()
     return searchss
+
+}
+
+function hello(){
+    searched(specs);
 }
 
 
 
-
-
-function searched(){
+function searched(callback1){
     
     let search3 = searchss
 if(search3.length == 0){
@@ -60,7 +77,7 @@ else{
     var cross = document.getElementById("search-button");
     
     search3.forEach(productt)
-
+    callback1();
     function productt(stck){
         // alert(stck.sr)
     const node1 = document.createElement("div");
@@ -82,7 +99,7 @@ else{
     <p class="price">₹${stck.price}</p>
     <p id="prod-descp">${stck.descp}</p>
     <br>
-    <p class="specs" id="specss${stck.sr}">Show Specifications<p>`;
+    <p class="specs" id="specs${stck.sr}">Show Specifications<p>`;
 
 
     const readMore = document.createElement("div");
@@ -173,16 +190,26 @@ else{
     
     };
     
+    
 
 }
-specs()
+
 function specs(){
-    stock4.forEach(function(stck){
-        document.getElementById(`specss${stck.sr}`).addEventListener('click', function(e){
+    searchss.forEach(function(stck){
+        document.getElementById(`specs${stck.sr}`).addEventListener('click', function(e){
             document.getElementById(`specs${stck.sr}`).innerHTML = '';
             var show = document.getElementById(`table${stck.sr}`);
             console.log('Yo');
             show.style.display = "block";
+    
+            e.preventDefault()
+        })
+    });
+    searchss.forEach(function(stck){
+        document.getElementById(`hide${stck.sr}`).addEventListener('click', function(e){
+            document.getElementById(`specs${stck.sr}`).innerHTML = 'Show Specifications';
+            var show = document.getElementById(`table${stck.sr}`);
+            show.style.display = "none";
     
             e.preventDefault()
         })
